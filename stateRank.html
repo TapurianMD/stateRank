@@ -1,0 +1,182 @@
+<!-- Copyright © 2016, Xerxes Langerudi. All rights reserved. -->
+
+<!doctype html>
+
+<html>
+<head>
+	<title>stateRank</title>
+</head>
+
+<style>
+
+html, body
+{
+	text-align: left;
+	color: turquoise;
+	height: 95%;
+}
+
+#menu
+{
+	width: 276px;
+	height: 100%;
+	font: 16px Verdana;
+	float: left;
+	background-color: white;
+}
+
+#header
+{
+	width: 276px;
+	height: 50px;
+	font-size: 25px;
+	color: grey;
+}
+
+.itemDescription
+{
+	width: 276px;
+	float: left;
+	color: grey;
+}
+
+.itemHolder
+{
+	width: 276px;
+	float: left;
+}
+
+#content
+{
+	width: 276px;
+	height: 100%;
+	font: 25px Verdana;
+	float: left;
+	background-color: white;
+}
+select
+{
+	width: 140px;
+	border: 2px solid turquoise;
+	color: grey;
+}
+
+</style>
+
+<body>
+	<div id="menu">
+		<form>
+			<div id="header">
+			stateRank
+			</div>
+
+			<div class="itemDescription" id="itemDescription1">
+			By:
+			</div>
+			<div class="itemHolder" id="itemHolder1">
+				<select name="by" id="by">
+					<option value="university">University</option>
+					<option value="profitableCompany">Profitable company</option>
+					<option value="medianIncome">Median Income</option>
+					<option value="crimeRate">Crime Rate</option>
+				</select>
+			</div>
+		</form>
+	</div>
+	<div id="variation">
+		<div class="content" id="content">
+		</div>
+	</div>
+
+<script type="text/javascript">
+
+var states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
+
+var university = [4, 21, 30, 13, 6, 38, 32, 20, 33, 22, 47, 10, 49, 43, 23, 25, 14, 35, 29, 42, 5, 46, 9, 7, 11, 15, 44, 37, 1, 18, 16, 17, 36, 31, 26, 3, 0, 40, 24];
+var profitableCompany = [4, 47];
+var medianIncome = [20, 30, 6, 1, 11, 21, 29, 46, 8, 4, 7, 47, 23, 5, 44, 32, 39, 13, 28, 50, 45, 49, 38, 2, 37, 43, 15, 34, 16, 10, 27, 19, 14, 35, 22, 25, 41, 12, 9, 40, 33, 31, 18, 26, 42, 36, 0, 17, 3, 48, 24];
+var crimeRate = [29, 45, 15, 44, 12, 23, 21, 19, 11, 50, 37, 26, 27, 16, 49, 47, 41, 5, 39, 32, 46, 48, 34, 6, 1, 35, 30, 43, 17, 28, 14, 33, 4, 9, 38, 2, 31, 36, 13, 10, 3, 42, 7, 20, 25, 40, 22, 0, 24, 18];
+
+
+var form = document.querySelector("form");
+
+show();
+
+form.addEventListener("change", show);
+
+function show()
+{
+	var by = form.elements.by.value;
+
+	var view = document.querySelector("#variation");
+
+	var previousContentDIV = document.querySelector("#content");
+
+
+	var contentDIV = document.createElement("div");
+	var headerDIV = document.createElement("div");
+
+	var choice;
+	var header;
+
+	switch (by)
+	{
+		case "university":
+
+			choice = university;
+
+			header = "University";
+
+			break;
+
+		case "profitableCompany":
+
+			choice = profitableCompany;
+
+			header = "Profitable Company";
+
+			break;
+
+		case "medianIncome":
+
+			choice = medianIncome;
+
+			header = "Median Income";
+
+			break;
+
+		case "crimeRate":
+
+			choice = crimeRate;
+
+			header = "Crime Rate";
+
+			break;
+
+	}
+
+	headerDIV.textContent =  header;
+	headerDIV.id = "header";
+
+	contentDIV.id = "content";
+
+	contentDIV.appendChild(headerDIV);
+
+	for (var i = 0; choice[i] != undefined; i++)
+	{
+		var itemDIV = document.createElement("div");
+
+		itemDIV.textContent =  states[choice[i]];
+		itemDIV.id = "item";
+
+		contentDIV.appendChild(itemDIV);
+	}
+
+	view.replaceChild(contentDIV, previousContentDIV);
+}
+
+</script>
+
+</body>
+</html>
+
