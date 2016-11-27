@@ -1,0 +1,563 @@
+<!-- Copyright © 2016, Xerxes Langerudi. All rights reserved. -->
+
+<!doctype html>
+
+<html>
+<head>
+	<title>stateRank</title>
+</head>
+
+<style>
+
+html, body
+{
+	text-align: left;
+	color: turquoise;
+	height: 95%;
+}
+
+#menu
+{
+	width: 300px;
+	height: 100%;
+	font: 25px Verdana;
+	float: left;
+	background-color: white;
+}
+
+.header
+{
+	width: 300px;
+	padding: 20px;
+	height: 50px;
+	font-size: 30px;
+	color: grey;
+}
+
+.itemDescription
+{
+	width: 276px;
+	padding: 20px;
+	float: left;
+	color: grey;
+}
+
+.itemHolder
+{
+	width: 276px;
+	padding: 20px;
+	float: left;
+	font-size: 20px;
+}
+
+.menuButton
+{
+	border: 1px solid turquoise;
+	font-size: 20px;
+}
+
+.content
+{
+	width: 276px;
+	height: 100%;
+	font: 25px Verdana;
+	float: left;
+	background-color: white;
+}
+
+#university, #profitableCompany, #medianIncome, #crimeRate
+{
+	display: none;
+}
+
+</style>
+
+<body>
+	<div class="header">
+	stateRank
+	</div>
+
+	<div id="menu">
+		<div class="itemDescription" id="itemDescription1">
+		Through:
+		</div>
+		<div class="itemHolder" id="itemHolder1">
+			<button class="menuButton" onclick="show('university')">University</button>
+		</div>
+		<div class="itemHolder" id="itemHolder1">
+			<button class="menuButton" onclick="show('profitableCompany')">Profitable Company</button>
+		</div>
+		<div class="itemHolder" id="itemHolder1">
+			<button class="menuButton" onclick="show('medianIncome')">Median Income</button>
+		</div>
+		<div class="itemHolder" id="itemHolder1">
+			<button class="menuButton" onclick="show('crimeRate')">Crime Rate</button>
+		</div>
+	</div>
+	<div class="content" id="university">
+		<div class="header">
+			University
+		</div>
+		<div class="item">
+			California
+		</div>
+		<div class="item">
+			Massechusetts
+		</div>
+		<div class="item">
+			New Jersey
+		</div>
+		<div class="item">
+			Illinois
+		</div>
+		<div class="item">
+			Connecticut
+		</div>
+		<div class="item">
+			Pennsylvania
+		</div>
+		<div class="item">
+			New York
+		</div>
+		<div class="item">
+			Maryland
+		</div>
+		<div class="item">
+			North Carolina
+		</div>
+		<div class="item">
+			Michigen
+		</div>
+		<div class="item">
+			Washington
+		</div>
+		<div class="item">
+			Georgia
+		</div>
+		<div class="item">
+			Wisconsin
+		</div>
+		<div class="item">
+			Texas
+		</div>
+		<div class="item">
+			Minnesota
+		</div>
+		<div class="item">
+			Missouri
+		</div>
+		<div class="item">
+			Indiana
+		</div>
+		<div class="item">
+			Ohio
+		</div>
+		<div class="item">
+			New Hampshire
+		</div>
+		<div class="item">
+			Tennesee
+		</div>
+		<div class="item">
+			Colorado
+		</div>
+		<div class="item">
+			Virginia
+		</div>
+		<div class="item">
+			Florida
+		</div>
+		<div class="item">
+			Delaware
+		</div>
+		<div class="item">
+			Hawaii
+		</div>
+		<div class="item">
+			Iowa
+		</div>
+		<div class="item">
+			Utah
+		</div>
+		<div class="item">
+			Oregon
+		</div>
+		<div class="item">
+			Alaska
+		</div>
+		<div class="item">
+			Louisiana
+		</div>
+		<div class="item">
+			Kansas
+		</div>
+		<div class="item">
+			Kentucky
+		</div>
+		<div class="item">
+			Oklahoma
+		</div>
+		<div class="item">
+			New Mexico
+		</div>
+		<div class="item">
+			Montana
+		</div>
+		<div class="item">
+			Arkansas
+		</div>
+		<div class="item">
+			Alabama
+		</div>
+		<div class="item">
+			South Carolina
+		</div>
+		<div class="item">
+			Mississippi
+		</div>
+	</div>
+	<div class="content" id="profitableCompany">
+		<div class="header">
+			Profitable Company
+		</div>
+		<div class="item">
+			California
+		</div>
+		<div class="item">
+			Washington
+		</div>
+	</div>
+	<div class="content" id="medianIncome">
+		<div class="header">
+			Median Income
+		</div>
+		<div class="item">
+			Maryland
+		</div>
+		<div class="item">
+			New Jersey
+		</div>
+		<div class="item">
+			Connecticut
+		</div>
+		<div class="item">
+			Alaska
+		</div>
+		<div class="item">
+			Hawaii
+		</div>
+		<div class="item">
+			Massachusetts
+		</div>
+		<div class="item">
+			New Hampshire
+		</div>
+		<div class="item">
+			Virginia
+		</div>
+		<div class="item">
+			District of Columbia
+		</div>
+		<div class="item">
+			California
+		</div>
+		<div class="item">
+			Delaware
+		</div>
+		<div class="item">
+			Washington
+		</div>
+		<div class="item">
+			Minnesota
+		</div>
+		<div class="item">
+			Colorado
+		</div>
+		<div class="item">
+			Utah
+		</div>
+		<div class="item">
+			New York
+		</div>
+		<div class="item">
+			Rhode Island
+		</div>
+		<div class="item">
+			Illinois
+		</div>
+		<div class="item">
+			Nevada
+		</div>
+		<div class="item">
+			Wyoming
+		</div>
+		<div class="item">
+			Vermont
+		</div>
+		<div class="item">
+			Wisconsin
+		</div>
+		<div class="item">
+			Pennsylvania
+		</div>
+		<div class="item">
+			Arizona
+		</div>
+		<div class="item">
+			Oregon
+		</div>
+		<div class="item">
+			Texas
+		</div>
+		<div class="item">
+			Iowa
+		</div>
+		<div class="item">
+			North Dakota
+		</div>
+		<div class="item">
+			Kansas
+		</div>
+		<div class="item">
+			Georgia
+		</div>
+		<div class="item">
+			Nebraska
+		</div>
+		<div class="item">
+			Maine
+		</div>
+		<div class="item">
+			Indiana
+		</div>
+		<div class="item">
+			Ohio
+		</div>
+		<div class="item">
+			Michigan
+		</div>
+		<div class="item">
+			Missouri
+		</div>
+		<div class="item">
+			South Dakota
+		</div>
+		<div class="item">
+			Idaho
+		</div>
+		<div class="item">
+			Florida
+		</div>
+		<div class="item">
+			South Carolina
+		</div>
+		<div class="item">
+			North Carolina
+		</div>
+		<div class="item">
+			New Mexico
+		</div>
+		<div class="item">
+			Louisiana
+		</div>
+		<div class="item">
+			Montana
+		</div>
+		<div class="item">
+			Tennessee
+		</div>
+		<div class="item">
+			Oklahoma
+		</div>
+		<div class="item">
+			Alabama
+		</div>
+		<div class="item">
+			Kentucky
+		</div>
+		<div class="item">
+			Arkansas
+		</div>
+		<div class="item">
+			West Virginia
+		</div>
+		<div class="item">
+			Mississippi
+		</div>
+	</div>
+	<div class="content" id="crimeRate">
+		<div class="header">
+			Crime Rate
+		</div>
+		<div class="item">
+			New Hampshire
+		</div>
+		<div class="item">
+			Vermont
+		</div>
+		<div class="item">
+			Iowa
+		</div>
+		<div class="item">
+			Utah
+		</div>
+		<div class="item">
+			Idaho
+		</div>
+		<div class="item">
+			Minnesota
+		</div>
+		<div class="item">
+			Massachusetts
+		</div>
+		<div class="item">
+			Maine
+		</div>
+		<div class="item">
+			Hawaii
+		</div>
+		<div class="item">
+			Wyoming
+		</div>
+		<div class="item">
+			Oregon
+		</div>
+		<div class="item">
+			Montana
+		</div>
+		<div class="item">
+			Nebraska
+		</div>
+		<div class="item">
+			Kansas
+		</div>
+		<div class="item">
+			Wisconsin
+		</div>
+		<div class="item">
+			Washington
+		</div>
+		<div class="item">
+			South Dakota
+		</div>
+		<div class="item">
+			Colorado
+		</div>
+		<div class="item">
+			Rhode Island
+		</div>
+		<div class="item">
+			New York
+		</div>
+		<div class="item">
+			Virginia
+		</div>
+		<div class="item">
+			West Virginia
+		</div>
+		<div class="item">
+			North Dakota
+		</div>
+		<div class="item">
+			Connecticut
+		</div>
+		<div class="item">
+			Alaska
+		</div>
+		<div class="item">
+			Ohio
+		</div>
+		<div class="item">
+			New Jersey
+		</div>
+		<div class="item">
+			Texas
+		</div>
+		<div class="item">
+			Kentucky
+		</div>
+		<div class="item">
+			Nevada
+		</div>
+		<div class="item">
+			Indiana
+		</div>
+		<div class="item">
+			North Carolina
+		</div>
+		<div class="item">
+			California
+		</div>
+		<div class="item">
+			Florida
+		</div>
+		<div class="item">
+			Pennsylvania
+		</div>
+		<div class="item">
+			Arizona
+		</div>
+		<div class="item">
+			New Mexico
+		</div>
+		<div class="item">
+			Oklahoma
+		</div>
+		<div class="item">
+			Illinois
+		</div>
+		<div class="item">
+			Georgia
+		</div>
+		<div class="item">
+			Arkansas
+		</div>
+		<div class="item">
+			Tennessee
+		</div>
+		<div class="item">
+			Delaware
+		</div>
+		<div class="item">
+			Maryland
+		</div>
+		<div class="item">
+			Missouri
+		</div>
+		<div class="item">
+			South Carolina
+		</div>
+		<div class="item">
+			Michigan
+		</div>
+		<div class="item">
+			Alabama
+		</div>
+		<div class="item">
+			Mississippi
+		</div>
+		<div class="item">
+			Louisiana
+		</div>
+	</div>
+
+<script type="text/javascript">
+
+var universityDiv = document.querySelector("#university");
+var profitableCompanyDiv = document.querySelector("#profitableCompany");
+var GDPPerCaptiaDiv = document.querySelector("#medianIncome");
+var crimeRateDiv = document.querySelector("#crimeRate");
+
+function show(topic)
+{
+	universityDiv.style.display = topic == "university"? "inline" : "none";
+	profitableCompanyDiv.style.display = topic == "profitableCompany"? "inline" : "none";
+	GDPPerCaptiaDiv.style.display = topic == "medianIncome"? "inline" : "none";
+	crimeRateDiv.style.display = topic == "crimeRate"? "inline" : "none";
+}
+
+</script>
+
+</body>
+</html>
+
